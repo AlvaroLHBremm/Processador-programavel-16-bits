@@ -2,7 +2,7 @@
 # Nexus - Website
 
 [![Protocolo](https://img.shields.io/badge/linguagem-Assembly-green.svg)](https://www.iso.org/standard/63648.html)
-[![Controlador](https://img.shields.io/badge/Arquitetura-software e hardware-orange.svg)](#)
+[![Controlador](https://img.shields.io/badge/Arquitetura-software_e_hardware-orange.svg)](#)
 [![Controlador](https://img.shields.io/badge/Simulador-Deeds-purple.svg)](#)
 
 
@@ -12,8 +12,8 @@ O `Processador programavel de 16 bits` é a continuação do projeto de mesmo no
 
 
 
-<p align="center"> <img src="figs/fluxograma.png" alt="diagrama" width="500"></p>
-<p align="center"><b>Fluxograma do website</b></p>
+<p align="center"> <img src="figs/CPU_view.png" alt="diagrama" width="100%"></p>
+<p align="center"><b>Arquitetura</b></p>
 <br><br>
 
 

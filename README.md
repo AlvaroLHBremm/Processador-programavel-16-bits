@@ -10,6 +10,10 @@
 
 O `Processador programavel de 16 bits` é a continuação do projeto de mesmo nome, avançando tópicos de arquitetura de processador,
 
+## 2	Objetivo do projeto
+
+Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado.
+
 
 
 <p align="center"> <img src="figs/CPU_view.png" alt="diagrama" width="100%"></p>
@@ -42,14 +46,19 @@ O `Processador programavel de 16 bits` é a continuação do projeto de mesmo no
 | `JMP` | Realiza um "pulo" sem condição para o endereço especificado. |
 | `JZ` | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
 | `JN` | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
-| `SBR` | Realiza um "pulo" sem condição para o endereço da subrotina especificado. |
+| `JOF` | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
+| `JEQ` | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
+| `JBT` | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
+| `JST` | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
+| `SBR` | Salva o endereço atual na memória e realiza um "pulo" sem condição para o endereço da subrotina especificado. |
+
 
 ### Instruções de periféricos
 | Instrução | Descrição |
 | :---: | :--- |
-| `INP` | Realiza um "pulo" sem condição para o endereço especificado. |
-| `OUT` | Realiza um "pulo" sem condição para o endereço especificado. |
-| `OUT` | Realiza um "pulo" sem condição para o endereço especificado. |
+| `INP` | Carrega o valor do registrador de input para o banco de registrador. |
+| `OUT` | Salva um valor da memória na matriz de pixel. |
+| `RDM` | Carrega o valor do contador interno para o banco de registrador. |
 
 
 

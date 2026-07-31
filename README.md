@@ -22,43 +22,43 @@ Criar uma arquitetura capáz de executar diversas instruções complexas present
 
 
 ### Instruções de fluxo de memória
-| Instrução | Descrição |
-| :---: | :--- |
-| `LDR` | Carrega valor da memória para o banco de registrador. |
-| `MOV` | Move o valor de um registrador para outro. |
-| `STR` | Salva o valor de um registrador para um endereço de memória. |
-| `HlT` | Para o clock do processador. |
+| Mnemonico | código | Descrição |
+| :---: | :---: | :--- |
+| `LDR` | 0x10 | Carrega valor da memória para o banco de registrador. |
+| `MOV` | 0x10 | Move o valor de um registrador para outro. |
+| `STR` | 0x10 | Salva o valor de um registrador para um endereço de memória. |
+| `HlT` | 0x10 | Para o clock do processador. |
 
 ### Instruções aritméticas
-| Instrução | Descrição |
-| :---: | :--- |
-| `ADD` | Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | Subtrai o valor de dois registradores e salva em um registrador. |
-| `AND` | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-| `MUL` | multiplica o valor de dois registradores e salva em um registrador. |
-| `OR` | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| Mnemonico | código | Descrição |
+| :---: | :---: | :--- |
+| `ADD` | 0x10 | Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | 0x10 | Subtrai o valor de dois registradores e salva em um registrador. |
+| `AND` | 0x10 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `MUL` | 0x10 | multiplica o valor de dois registradores e salva em um registrador. |
+| `OR`  | 0x10 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
 | `SHR` | Desloca o valor de um registrador para a direita, dividindo-o por 2. |
 | `SHL` | Desloca o valor de um registrador para a esquerda, multiplicando-o por 2. |
 
 ### Instruções de 
-| Instrução | Descrição |
-| :---: | :--- |
-| `JMP` | Realiza um "pulo" sem condição para o endereço especificado. |
-| `JZ` | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
-| `JN` | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
-| `JOF` | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
-| `JEQ` | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
-| `JBT` | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
-| `JST` | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
-| `SBR` | Salva o endereço atual na memória e realiza um "pulo" sem condição para o endereço da subrotina especificado. |
+| Mnemonico | código | Descrição |
+| :---: | :---: | :--- |
+| `JMP` | 0x10 | Realiza um "pulo" sem condição para o endereço especificado. |
+| `JZ` | 0x10 | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
+| `JN` | 0x10 | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
+| `JOF` | 0x10 | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
+| `JEQ` | 0x10 | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
+| `JBT` | 0x10 | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
+| `JST` | 0x10 | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
+| `SBR` | 0x10 | Salva o endereço atual na memória e realiza um "pulo" sem condição para o endereço da subrotina especificado. |
 
 
 ### Instruções de periféricos
-| Instrução | Descrição |
-| :---: | :--- |
-| `INP` | Carrega o valor do registrador de input para o banco de registrador. |
-| `OUT` | Salva um valor da memória na matriz de pixel. |
-| `RDM` | Carrega o valor do contador interno para o banco de registrador. |
+| Mnemonico | código | Descrição |
+| :---: | :---: | :--- |
+| `INP` | 0x10 | Carrega o valor do registrador de input para o banco de registrador. |
+| `OUT` | 0x10 | Salva um valor da memória na matriz de pixel. |
+| `RDM` | 0x10 | Carrega o valor do contador interno para o banco de registrador. |
 
 
 

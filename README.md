@@ -17,15 +17,39 @@ O `Processador programavel de 16 bits` é a continuação do projeto de mesmo no
 <br><br>
 
 
-
-| Arquivo | Descrição |
+### Instruções de fluxo de memória
+| Instrução | Descrição |
 | :---: | :--- |
-| `index.php` | Disponibiliza um dashboard online através de requisições periodicas ao banco de dados do host. |
-| `upload.php` | Quando setado corretamente, fará o upload dos dados ao banco de dados do host. |
-| `controller.php` | Arquivo responsavel por gerenciar as ações ao banco de dados.  |
-| `backend.php` | Arquivo que contem classes responsaveis por conectar-se e realizar queries ao banco de dados. |
-| `estilo.css` | Arquivo responsavel por formatar a configuração estética HTML do website. |
-| `/imagens` | Pasta que contem as imagens, icones, gifs, audio, etc, utilizados pelo website. |# Processador-programavel-16-bits
+| `LDR` | Carrega valor da memória para o banco de registrador. |
+| `MOV` | Move o valor de um registrador para outro. |
+| `STR` | Salva o valor de um registrador para um endereço de memória. |
+| `HlT` | Para o clock do processador. |
+
+### Instruções aritméticas
+| Instrução | Descrição |
+| :---: | :--- |
+| `ADD` | Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | Subtrai o valor de dois registradores e salva em um registrador. |
+| `AND` | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `MUL` | multiplica o valor de dois registradores e salva em um registrador. |
+| `OR` | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| `SHR` | Desloca o valor de um registrador para a direita, dividindo-o por 2. |
+| `SHL` | Desloca o valor de um registrador para a esquerda, multiplicando-o por 2. |
+
+### Instruções de 
+| Instrução | Descrição |
+| :---: | :--- |
+| `JMP` | Realiza um "pulo" sem condição para o endereço especificado. |
+| `JZ` | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
+| `JN` | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
+| `SBR` | Realiza um "pulo" sem condição para o endereço da subrotina especificado. |
+
+### Instruções de periféricos
+| Instrução | Descrição |
+| :---: | :--- |
+| `INP` | Realiza um "pulo" sem condição para o endereço especificado. |
+| `OUT` | Realiza um "pulo" sem condição para o endereço especificado. |
+| `OUT` | Realiza um "pulo" sem condição para o endereço especificado. |
 
 
 

@@ -20,6 +20,7 @@ Criar uma arquitetura capáz de executar diversas instruções complexas present
 <p align="center"><b>Arquitetura</b></p>
 <br><br>
 
+## 3	Conjunto de instruções
 
 ### Instruções de fluxo de memória
 | Mnemonico | código | Descrição |

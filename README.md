@@ -37,8 +37,8 @@ Criar uma arquitetura capáz de executar diversas instruções complexas present
 | `AND` | 0x60 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
 | `MUL` | 0x70 | multiplica o valor de dois registradores e salva em um registrador. |
 | `OR`  | 0x80 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
-| `SHR` | 0x90 | Desloca o valor de um registrador para a direita, dividindo-o por 2. |
-| `SHL` | 0x9F | Desloca o valor de um registrador para a esquerda, multiplicando-o por 2. |
+| `SHR` | 0x90 | Desloca o valor de um registrador, dividindo-o por 2. |
+| `SHL` | 0x9F | Desloca o valor de um registrador, multiplicando-o por 2. |
 
 ### Instruções de 
 | Mnemonico | código | Descrição |

@@ -1,5 +1,5 @@
 
-# Nexus - Website
+# Processador programavel 16 bits - (imcompleto/Em desenvolvimento)
 
 [![Protocolo](https://img.shields.io/badge/linguagem-Assembly-green.svg)](https://www.iso.org/standard/63648.html)
 [![Controlador](https://img.shields.io/badge/Arquitetura-software_e_hardware-orange.svg)](#)
@@ -8,11 +8,16 @@
 
 ## 1	Descrição do projeto
 
-O `Processador programavel de 16 bits` é a continuação do projeto de mesmo nome, avançando tópicos de arquitetura de processador,
+O `Processador programavel de 16 bits` é a continuação do projeto processador programavel de 8 bits, avançando tópicos de arquitetura de processador e de software
 
 ## 2	Objetivo do projeto
 
-Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado.
+Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado. Alocação dinamica de memória, chamada de subrotina, recursividade de função
+
+Objetivos:
+* Alocação dinamica de memória com Heap e Stack.
+* Chamada de subrotina com retorno.
+* Recursivade de software.
 
 
 
@@ -25,7 +30,7 @@ Criar uma arquitetura capáz de executar diversas instruções complexas present
 ### Instruções de fluxo de memória
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
-| `LDR` | 0x10 | Carrega valor da memória para o banco de registrador. |
+| `LDR` | 0x10 | Carrega valor da memória para o banco de registradores. |
 | `MOV` | 0x20 | Move o valor de um registrador para outro. |
 | `STR` | 0x30 | Salva o valor de um registrador para um endereço de memória. |
 

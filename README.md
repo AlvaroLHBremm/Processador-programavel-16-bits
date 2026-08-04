@@ -19,7 +19,7 @@ Objetivos:
 * Chamada de subrotina com retorno.
 * Recursivade de software.
 
-
+## Conjunto de blocos
 
 <p align="center"> <img src="figs/CPU_view.png" alt="diagrama" width="100%"></p>
 <p align="center"><b>Arquitetura</b></p>

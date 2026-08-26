@@ -14,10 +14,11 @@ O `Processador programavel de 16 bits` é a continuação do projeto processador
 
 Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado. Alocação dinamica de memória, chamada de subrotina, recursividade de função
 
-Objetivos:
-* Alocação dinamica de memória com Heap e Stack.
-* Chamada de subrotina com retorno.
-* Recursivade de software.
+### Objetivos:
+* Alocação dinamica de memória.
+* Chamada de subrotina com retorno e recursividade por software.
+
+Com esses dois objetivos integrados será possivel criar códigos mais complexos, como simular um disk operating system (DOS) para gerenciar arquivos e programas. Contudo, não será possivel salvar qualquer arquivo na ROM pois devido a limitação do Deeds, não há um bloco de armazenamento de memória. 
 
 ## Conjunto de blocos
 

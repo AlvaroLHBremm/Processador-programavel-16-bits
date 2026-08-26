@@ -20,7 +20,9 @@ Criar uma arquitetura capáz de executar diversas instruções complexas present
 
 Com esses dois objetivos integrados será possivel criar códigos mais complexos, como simular um disk operating system (DOS) para gerenciar arquivos e programas. Contudo, não será possivel salvar qualquer arquivo na ROM pois devido a limitação do Deeds, não há um bloco de armazenamento de memória. 
 
-## Conjunto de blocos
+## Estrutura
+
+Abaixo está uma comparação entre as arquiteturas do processador de 16 bits (Dentro do bloco azul) e o processador de 8 bits (Dentro do bloco vermelho). Atualmente o processador de 16 bits ainda está em desenvolvimento. o que está contido dentro de seu bloco são estruturas desenvolvidas especificamente pare este projeto, como: Decodificador de instrução, display 64x64, modulo de memória RAM e ROM e ULA com banco de registradores. 
 
 <p align="center"> <img src="figs/CPU_view.png" alt="diagrama" width="100%"></p>
 <p align="center"><b>Arquitetura</b></p>

@@ -22,7 +22,12 @@ Com esses dois objetivos integrados será possivel criar códigos mais complexos
 
 ## Estrutura
 
-Abaixo está uma comparação entre as arquiteturas do processador de 16 bits (Dentro do bloco azul) e o processador de 8 bits (Dentro do bloco vermelho). Atualmente o processador de 16 bits ainda está em desenvolvimento. o que está contido dentro de seu bloco são estruturas desenvolvidas especificamente pare este projeto, como: Decodificador de instrução, display 64x64, modulo de memória RAM e ROM e ULA com banco de registradores. 
+Abaixo está uma comparação entre as arquiteturas do processador de 16 bits (Dentro do bloco azul) e o processador de 8 bits (Dentro do bloco vermelho). 
+
+Atualmente o processador de 16 bits ainda está em desenvolvimento, e portanto, diversas estruturas cruciais estão faltando incluindo o roteamento dos barramentos. 
+
+
+o que está contido dentro de seu bloco são estruturas desenvolvidas especificamente pare este projeto, como: Decodificador de instrução, display 64x64, modulo de memória RAM e ROM e ULA com banco de registradores. 
 
 <p align="center"> <img src="figs/CPU_view.png" alt="diagrama" width="100%"></p>
 <p align="center"><b>Arquitetura</b></p>

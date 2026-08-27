@@ -35,7 +35,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 
 ## 3	Conjunto de instruções
 
-### Instruções de alocação de memória
+### 3.1 - Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- |
 | `LDR` | 0x10 | Load register | Carrega valor da memória para o banco de registradores. |
@@ -44,7 +44,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `STR` | 0x40 | Store register | Salva o valor de um registrador para um endereço de memória. |
 | `STI` | 0x50 | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |
 
-### Instruções aritméticas
+### 3.2 - Instruções aritméticas
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- | 
 | `ADD` | 0x61 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
@@ -57,7 +57,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `INC` | 0x68 | Increment | Incrementa o valor de um registrador por 1. |
 | `DEC` | 0x69 | Decrement | Decrementa o valor de um registrador por 1. |
 
-### Instruções de pulos de memória
+### 3.3 - Instruções de pulos de memória
 | Mnemônico | Código | nome | Descrição |
 | :---: | :---: | :--- | :--- |
 | `JMP` | 0x70 | Jump | Realiza um "pulo" sem condição para o endereço especificado. |
@@ -70,7 +70,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `SBR` | 0x77 | Subroutine | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
 
 
-### Instruções de periféricos
+### 3.4 - Instruções de periféricos
 | Mnemônico | Código | Nome |  Descrição |
 | :---: | :---: | :--- | :---: | 
 | `INP` | 0xB0 | Input | Carrega o valor do registrador de input para o banco de registrador. |

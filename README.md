@@ -39,15 +39,16 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
 | `LDR` | 0x10 | Carrega valor da memória para o banco de registradores. |
-| `MOV` | 0x20 | Move o valor de um registrador para outro. |
-| `STR` | 0x30 | Salva o valor de um registrador para um endereço de memória. |
+| `LDI` | 0x20 | Carrega valor constante da memória imediatamente para o um de registradores. |
+| `MOV` | 0x30 | Move o valor de um registrador para outro. |
+| `STR` | 0x40 | Salva o valor de um registrador para um endereço de memória. |
 
 ### Instruções aritméticas
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
-| `ADD` | 0x40 | Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | 0x50 | Subtrai o valor de dois registradores e salva em um registrador. |
-| `AND` | 0x60 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `ADD` | 0x50 | Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | 0x60 | Subtrai o valor de dois registradores e salva em um registrador. |
+| `AND` | 0x70 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
 <!--| `MUL` | 0x70 | multiplica o valor de dois registradores e salva em um registrador. |-->
 | `OR`  | 0x80 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
 | `SHR` | 0x90 | Desloca o valor de um registrador, dividindo-o por 2. |
@@ -70,9 +71,9 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
 | `INP` | 0xB0 | Carrega o valor do registrador de input para o banco de registrador. |
-| `OUT` | 0xC0 | Salva um valor da memória na matriz de pixel. |
+| `OUT` | 0xC0 | Salva um valor da memória no display matriz. |
 | `RDM` | 0xD0 | Carrega o valor do contador interno para o banco de registrador. |
-| `HlT` | 0xE0 | Para o clock do processador. |
+| `HLT` | 0xE0 | Para o clock do processador. |
 
 
 

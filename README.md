@@ -37,7 +37,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 
 ### Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |
-| :---: | :---: | :---: | :--- |
+| :---: | :---: | :--- | :--- |
 | `LDR` | 0x10 | Load register | Carrega valor da memória para o banco de registradores. |
 | `LDI` | 0x20 | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
 | `MOV` | 0x30 | Move | Move o valor de um registrador para outro. |
@@ -46,7 +46,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 
 ### Instruções aritméticas
 | Mnemônico | Código | Nome | Descrição |
-| :---: | :---: | :---: | :--- | 
+| :---: | :---: | :--- | :--- | 
 | `ADD` | 0x61 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
 | `SUB` | 0x62 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
 | `MUL` | 0x63 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
@@ -58,8 +58,8 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `DEC` | 0x69 | Decrement | Decrementa o valor de um registrador por 1. |
 
 ### Instruções de pulos de memória
-| Mnemonico | Código | nome | Descrição |
-| :---: | :---: | :---: | :--- |
+| Mnemônico | Código | nome | Descrição |
+| :---: | :---: | :--- | :--- |
 | `JMP` | 0x70 | Jump | Realiza um "pulo" sem condição para o endereço especificado. |
 | `JZ`  | 0x71 | Jump zero | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
 | `JN`  | 0x72 | Jump negative | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
@@ -71,12 +71,12 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 
 
 ### Instruções de periféricos
-| Mnemonico | código | Descrição |
-| :---: | :---: | :--- |
-| `INP` | 0xB0 | Carrega o valor do registrador de input para o banco de registrador. |
-| `OUT` | 0xC0 | Salva um valor da memória no display matriz. |
-| `RDM` | 0xD0 | Carrega o valor do contador interno para o banco de registrador. |
-| `HLT` | 0xE0 | Para o clock do processador. |
+| Mnemônico | Código | Nome |  Descrição |
+| :---: | :---: | :--- | :---: | 
+| `INP` | 0xB0 | Input | Carrega o valor do registrador de input para o banco de registrador. |
+| `OUT` | 0xC0 | Output | Salva um valor da memória no display matriz. |
+| `RDM` | 0xD0 | Random | Carrega o valor do contador interno para o banco de registrador. |
+| `HLT` | 0xE0 | Halt | Para o clock do processador. |
 
 
 

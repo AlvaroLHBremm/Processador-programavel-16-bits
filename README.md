@@ -36,35 +36,38 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 ## 3	Conjunto de instruções
 
 ### Instruções de alocação de memória
-| Mnemonico | código | Descrição |
-| :---: | :---: | :--- |
-| `LDR` | 0x10 | Carrega valor da memória para o banco de registradores. |
-| `LDI` | 0x20 | Carrega valor constante da memória imediatamente para o um de registradores. |
-| `MOV` | 0x30 | Move o valor de um registrador para outro. |
-| `STR` | 0x40 | Salva o valor de um registrador para um endereço de memória. |
+| Mnemônico | Código | Nome | Descrição |
+| :---: | :---: | :---: | :--- |
+| `LDR` | 0x10 | Load Register | Carrega valor da memória para o banco de registradores. |
+| `LDI` | 0x20 | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
+| `MOV` | 0x30 | Move | Move o valor de um registrador para outro. |
+| `STR` | 0x40 | Store register | Salva o valor de um registrador para um endereço de memória. |
+| `STI` | 0x50 | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |
 
 ### Instruções aritméticas
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
-| `ADD` | 0x50 | Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | 0x60 | Subtrai o valor de dois registradores e salva em um registrador. |
-| `AND` | 0x70 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-<!--| `MUL` | 0x70 | multiplica o valor de dois registradores e salva em um registrador. |-->
-| `OR`  | 0x80 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
-| `SHR` | 0x90 | Desloca o valor de um registrador, dividindo-o por 2. |
-| `SHL` | 0x9F | Desloca o valor de um registrador, multiplicando-o por 2. |
+| `ADD` | 0x61 | Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | 0x62 | Subtrai o valor de dois registradores e salva em um registrador. |
+| `AND` | 0x63 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `MUL` | 0x64 | multiplica o valor de dois registradores e salva em um registrador. |
+| `OR`  | 0x65 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| `SHR` | 0x66 | Desloca o valor de um registrador, dividindo-o por 2. |
+| `SHL` | 0x67 | Desloca o valor de um registrador, multiplicando-o por 2. |
+| `INC` | 0x68 | Incrementa o valor de um registrador por 1. |
+| `DEC` | 0x69 | Decrementa o valor de um registrador por 1. |
 
-### Instruções de 
+### Instruções de pulos de memória
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
-| `JMP` | 0xA0 | Realiza um "pulo" sem condição para o endereço especificado. |
-| `JZ`  | 0xA1 | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
-| `JN`  | 0xA2 | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
-| `JOF` | 0xA3 | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
-| `JEQ` | 0xA4 | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
-| `JBT` | 0xA5 | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
-| `JST` | 0xA6 | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
-| `SBR` | 0xA7 | Salva o endereço atual na memória e realiza um "pulo" sem condição para o endereço da subrotina especificado. |
+| `JMP` | 0x70 | Realiza um "pulo" sem condição para o endereço especificado. |
+| `JZ`  | 0x71 | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
+| `JN`  | 0x72 | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
+| `JOF` | 0x73 | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
+| `JEQ` | 0x74 | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
+| `JLT` | 0x75 | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
+| `JST` | 0x76 | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
+| `SBR` | 0x77 | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
 
 
 ### Instruções de periféricos

@@ -46,7 +46,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 
 ### Instruções aritméticas
 | Mnemônico | Código | Nome | Descrição |
-| :---: | :---: | :--- |
+| :---: | :---: | :---: | :--- | 
 | `ADD` | 0x61 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
 | `SUB` | 0x62 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
 | `MUL` | 0x63 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
@@ -58,16 +58,16 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `DEC` | 0x69 | Decrement | Decrementa o valor de um registrador por 1. |
 
 ### Instruções de pulos de memória
-| Mnemonico | código | Descrição |
-| :---: | :---: | :--- |
-| `JMP` | 0x70 | Realiza um "pulo" sem condição para o endereço especificado. |
-| `JZ`  | 0x71 | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
-| `JN`  | 0x72 | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
-| `JOF` | 0x73 | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
-| `JEQ` | 0x74 | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
-| `JLT` | 0x75 | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
-| `JST` | 0x76 | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
-| `SBR` | 0x77 | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
+| Mnemonico | Código | nome | Descrição |
+| :---: | :---: | :---: | :--- |
+| `JMP` | 0x70 | Jump | Realiza um "pulo" sem condição para o endereço especificado. |
+| `JZ`  | 0x71 | Jump zero | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
+| `JN`  | 0x72 | Jump negative | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
+| `JOF` | 0x73 | Jump overflow | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
+| `JEQ` | 0x74 | Jump equivalent | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
+| `JLT` | 0x75 | Jump larger than | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
+| `JST` | 0x76 | Jump smaller than | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
+| `SBR` | 0x77 | Subroutine | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
 
 
 ### Instruções de periféricos

@@ -62,7 +62,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `DEC` | 0x69 | Decrement | Decrementa o valor de um registrador por 1. |
 
 ### 3.3 - Instruções de pulos de memória
-| Mnemônico | Código | nome | Descrição |
+| Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- |
 | `JMP` | 0x70 | Jump | Realiza um "pulo" sem condição para o endereço especificado. |
 | `JZ`  | 0x71 | Jump zero | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |

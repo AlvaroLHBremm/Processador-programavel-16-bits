@@ -38,24 +38,24 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 ### Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :---: | :--- |
-| `LDR` | 0x10 | Load Register | Carrega valor da memória para o banco de registradores. |
+| `LDR` | 0x10 | Load register | Carrega valor da memória para o banco de registradores. |
 | `LDI` | 0x20 | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
 | `MOV` | 0x30 | Move | Move o valor de um registrador para outro. |
 | `STR` | 0x40 | Store register | Salva o valor de um registrador para um endereço de memória. |
 | `STI` | 0x50 | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |
 
 ### Instruções aritméticas
-| Mnemonico | código | Descrição |
+| Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- |
-| `ADD` | 0x61 | Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | 0x62 | Subtrai o valor de dois registradores e salva em um registrador. |
-| `AND` | 0x63 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-| `MUL` | 0x64 | multiplica o valor de dois registradores e salva em um registrador. |
-| `OR`  | 0x65 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
-| `SHR` | 0x66 | Desloca o valor de um registrador, dividindo-o por 2. |
-| `SHL` | 0x67 | Desloca o valor de um registrador, multiplicando-o por 2. |
-| `INC` | 0x68 | Incrementa o valor de um registrador por 1. |
-| `DEC` | 0x69 | Decrementa o valor de um registrador por 1. |
+| `ADD` | 0x61 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | 0x62 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
+| `MUL` | 0x63 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
+| `AND` | 0x64 | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `OR`  | 0x65 | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| `SHR` | 0x66 | Shift right | Desloca o valor de um registrador, dividindo-o por 2. |
+| `SHL` | 0x67 | Shift left | Desloca o valor de um registrador, multiplicando-o por 2. |
+| `INC` | 0x68 | Increment | Incrementa o valor de um registrador por 1. |
+| `DEC` | 0x69 | Decrement | Decrementa o valor de um registrador por 1. |
 
 ### Instruções de pulos de memória
 | Mnemonico | código | Descrição |

@@ -12,7 +12,7 @@ O `Processador programavel de 16 bits` é a continuação do projeto processador
 
 ## 2	Objetivo do projeto
 
-Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado. Alocação dinamica de memória, chamada de subrotina, recursividade de função
+O objetivo deste projeto é Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado. Alocação dinamica de memória, chamada de subrotina, recursividade de função
 
 ### Objetivos:
 * Alocação dinamica de memória.
@@ -35,7 +35,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 
 ## 3	Conjunto de instruções
 
-### Instruções de fluxo de memória
+### Instruções de alocação de memória
 | Mnemonico | código | Descrição |
 | :---: | :---: | :--- |
 | `LDR` | 0x10 | Carrega valor da memória para o banco de registradores. |
@@ -48,7 +48,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | `ADD` | 0x40 | Soma o valor de dois registradores e salva em um registrador. |
 | `SUB` | 0x50 | Subtrai o valor de dois registradores e salva em um registrador. |
 | `AND` | 0x60 | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-| `MUL` | 0x70 | multiplica o valor de dois registradores e salva em um registrador. |
+<!--| `MUL` | 0x70 | multiplica o valor de dois registradores e salva em um registrador. |-->
 | `OR`  | 0x80 | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
 | `SHR` | 0x90 | Desloca o valor de um registrador, dividindo-o por 2. |
 | `SHL` | 0x9F | Desloca o valor de um registrador, multiplicando-o por 2. |

@@ -10,13 +10,17 @@
 
 O `Processador programavel de 16 bits` é a continuação do projeto processador programavel de 8 bits, avançando tópicos de arquitetura de processador e de software
 
+O projeto foi inicialmente baseado em microprocessadores hipotéticos como o Neander e Ahmes, os quais foram utilizados como base para a construção do primeiro processador de 8 bits. A sua continuação, o processador de 16 bits, possui como base arquiteturas de componentes reais como o intel 8008. Deste modo, o projeto se assimilaria com os desafios de hardware e software presentes ao longo do desenvolvimento das tecnologias.
+
 ## 2	Objetivo do projeto
 
 O objetivo deste projeto é Criar uma arquitetura capáz de executar diversas instruções complexas presentes nos computadores atuais, afim der posibilitar a criação de códigos dinamicos, como um sistema operacional basico, miniaturizado. Alocação dinamica de memória, chamada de subrotina, recursividade de função
 
 ### Objetivos:
+* Instruction set de 16 bits para suportar  mais códigos.
 * Alocação dinamica de memória.
 * Chamada de subrotina com retorno e recursividade por software.
+* Suporte para periféricos de entrada e saida
 
 Com esses dois objetivos integrados será possivel criar códigos mais complexos, como simular um disk operating system (DOS) para gerenciar arquivos e programas. Contudo, não será possivel salvar qualquer arquivo na ROM pois devido a limitação do Deeds, não há um bloco de armazenamento de memória. 
 

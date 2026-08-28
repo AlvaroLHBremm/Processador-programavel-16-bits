@@ -24,7 +24,7 @@ O objetivo deste projeto é Criar uma arquitetura capáz de executar diversas in
 
 Com esses dois objetivos integrados será possivel criar códigos mais complexos, como simular um disk operating system (DOS) para gerenciar arquivos e programas. Contudo, não será possivel salvar qualquer arquivo na ROM pois devido a limitação do Deeds, não há um bloco de armazenamento de memória. 
 
-## Estrutura
+## Estrutura geral
 
 Abaixo está uma comparação entre as arquiteturas do processador de 16 bits (Dentro do bloco azul) e o processador de 8 bits (Dentro do bloco vermelho). 
 
@@ -37,7 +37,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 <p align="center"><b>Arquitetura</b></p>
 <br><br>
 
-## 3	Arquitetura de conjunto de instruções - ISA
+## 3	  Arquitetura de conjunto de instruções - ISA
 
 ### 3.1 - Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |

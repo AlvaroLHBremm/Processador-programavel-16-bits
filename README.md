@@ -42,45 +42,53 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 ### 3.1 - Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- |
-| `LDR` | 0x10 | Load register | Carrega valor da memória para o banco de registradores. |
-| `LDI` | 0x20 | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
-| `MOV` | 0x30 | Move | Move o valor de um registrador para outro. |
-| `STR` | 0x40 | Store register | Salva o valor de um registrador para um endereço de memória. |
-| `STI` | 0x50 | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |
+| `LDR` | 0x0R | Load register | Carrega valor da memória para o banco de registradores. |
+| `LDI` | 0x1R | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
+| `LDB` | 0x18 | Load bank | Carrega 8 valores de memória em todos os registradors do banco de registradores |
+| `MOV` | 0x1F | Move | Move o valor de um registrador para outro. |
+| `STR` | 0x2R | Store register | Salva o valor de um registrador para um endereço de memória. |
+| `STI` | 0x3R | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |
+| `STB` | 0x38 | Store bank | Armazena o valor de todos os 8 registradores em um endereço de memória |
+
+O segundo nibble, caso for 0, denota a instrução reservada para denominar o registrador escolhido para realizar a instrução de carregamento ou armazenamento.
+
+<!-- Should LDB and STB load an store imediately like LDI and STI ? -->
 
 ### 3.2 - Instruções aritméticas
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- | 
-| `ADD` | 0x61 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | 0x62 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
-| `MUL` | 0x63 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
-| `AND` | 0x64 | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-| `OR`  | 0x65 | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
-| `SHR` | 0x66 | Shift right | Desloca o valor de um registrador, dividindo-o por 2. |
-| `SHL` | 0x67 | Shift left | Desloca o valor de um registrador, multiplicando-o por 2. |
-| `INC` | 0x68 | Increment | Incrementa o valor de um registrador por 1. |
-| `DEC` | 0x69 | Decrement | Decrementa o valor de um registrador por 1. |
+| `ADD` | 0x41 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | 0x42 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
+| `MUL` | 0x43 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
+| `AND` | 0x44 | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `OR`  | 0x45 | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| `SHR` | 0x5R | Shift right | Desloca o valor de um registrador, dividindo-o por 2. |
+| `SHL` | 0x6R | Shift left | Desloca o valor de um registrador, multiplicando-o por 2. |
+| `INC` | 0x7R | Increment | Incrementa o valor de um registrador por 1. |
+| `DEC` | 0x8R | Decrement | Decrementa o valor de um registrador por 1. |
+
+O segundo byte da instrução reserva dois nibbles pare denominar os registradores os quais iram realizar a operação. O registrador escolhido do primeiro nibble irá funcionar como acumulador, armazenando o valor da operação em si mesmo, exemplo:| 0x61 | 0x12 | --> R1 = R1 + R2;
 
 ### 3.3 - Instruções de pulos de memória
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- |
-| `JMP` | 0x70 | Jump | Realiza um "pulo" sem condição para o endereço especificado. |
-| `JZ`  | 0x71 | Jump zero | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
-| `JN`  | 0x72 | Jump negative | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
-| `JOF` | 0x73 | Jump overflow | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
-| `JEQ` | 0x74 | Jump equivalent | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
-| `JLT` | 0x75 | Jump larger than | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
-| `JST` | 0x76 | Jump smaller than | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
-| `SBR` | 0x77 | Subroutine | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
+| `JMP` | 0x9R | Jump | Realiza um "pulo" sem condição para o endereço especificado. |
+| `JZ`  | 0xAR | Jump zero | Realiza um "pulo" com condição; registrador especificado igual a 0, para o endereço especificado. |
+| `JN`  | 0xBR | Jump negative | Realiza um "pulo" com condição; registrador especificado negativo, para o endereço especificado. |
+| `JOF` | 0xCR | Jump overflow | Realiza um "pulo" com condição; Flag de overflow ligada, para o endereço especificado. |
+| `JEQ` | 0xD0 | Jump equivalent | Realiza um "pulo" com condição; registrador A `igual` a registrador B, para o endereço especificado. |
+| `JLT` | 0xD1 | Jump larger than | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
+| `JST` | 0xD2 | Jump smaller than | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
+| `SBR` | 0xD3 | Subroutine | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
 
 
 ### 3.4 - Instruções de periféricos
 | Mnemônico | Código | Nome |  Descrição |
 | :---: | :---: | :--- | :---: | 
-| `INP` | 0xB0 | Input | Carrega o valor do registrador de input para o banco de registrador. |
-| `OUT` | 0xC0 | Output | Salva um valor da memória no display matriz. |
-| `RDM` | 0xD0 | Random | Carrega o valor do contador interno para o banco de registrador. |
-| `HLT` | 0xE0 | Halt | Para o clock do processador. |
+| `INP` | 0xE0 | Input | Carrega o valor do registrador de input para o banco de registrador. |
+| `OUT` | 0xE1 | Output | Salva um valor da memória no display matriz. |
+| `RDM` | 0xE2 | Random | Carrega o valor do contador interno para o banco de registrador. |
+| `HLT` | 0xE3 | Halt | Para o clock do processador. |
 
 
 

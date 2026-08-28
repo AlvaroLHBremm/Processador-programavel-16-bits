@@ -42,7 +42,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 ### 3.1 - Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- |
-| `LDR` | 0x0R | Load register | Carrega valor da memória para o banco de registradores. |
+| `LDR` | 0x0`R` | Load register | Carrega valor da memória para o banco de registradores. |
 | `LDI` | 0x1R | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
 | `STR` | 0x2R | Store register | Salva o valor de um registrador para um endereço de memória. |
 | `STI` | 0x3R | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |

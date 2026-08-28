@@ -44,28 +44,29 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 | :---: | :---: | :--- | :--- |
 | `LDR` | 0x0R | Load register | Carrega valor da memória para o banco de registradores. |
 | `LDI` | 0x1R | Load immediate | Carrega valor constante da memória imediatamente para o um de registradores. |
-| `LDB` | 0x18 | Load bank | Carrega 8 valores de memória em todos os registradors do banco de registradores |
-| `MOV` | 0x1F | Move | Move o valor de um registrador para outro. |
 | `STR` | 0x2R | Store register | Salva o valor de um registrador para um endereço de memória. |
 | `STI` | 0x3R | Store immediate | Armazena valor do registrador imediatamente para o endereço atual. |
-| `STB` | 0x38 | Store bank | Armazena o valor de todos os 8 registradores em um endereço de memória |
+| `LDM` | 0x38 | Load Multiple | Carrega 8 valores de memória em todos os registradors do banco de registradores |
+| `STM` | 0x39 | Store Multiple | Armazena o valor de todos os 8 registradores em um endereço de memória |
+| `MOV` | 0x3A | Move | Move o valor de um registrador para outro. |
 
-O segundo nibble, caso for 0, denota a instrução reservada para denominar o registrador escolhido para realizar a instrução de carregamento ou armazenamento.
+
+O segundo nibble, caso for `R`, denota a instrução reservada para denominar o registrador escolhido para realizar a instrução de carregamento ou armazenamento.
 
 <!-- Should LDB and STB load an store imediately like LDI and STI ? -->
 
 ### 3.2 - Instruções aritméticas
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- | 
-| `ADD` | 0x41 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | 0x42 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
-| `MUL` | 0x43 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
-| `AND` | 0x44 | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-| `OR`  | 0x45 | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
-| `SHR` | 0x5R | Shift right | Desloca o valor de um registrador, dividindo-o por 2. |
-| `SHL` | 0x6R | Shift left | Desloca o valor de um registrador, multiplicando-o por 2. |
-| `INC` | 0x7R | Increment | Incrementa o valor de um registrador por 1. |
-| `DEC` | 0x8R | Decrement | Decrementa o valor de um registrador por 1. |
+| `ADD` | 0x3B | Addition |  Soma o valor de dois registradores e salva em um registrador. |
+| `SUB` | 0x3C | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
+| `MUL` | 0x3D | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
+| `AND` | 0x3E | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
+| `OR`  | 0x3F | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| `SHR` | 0x4R | Shift right | Desloca o valor de um registrador, dividindo-o por 2. |
+| `SHL` | 0x5R | Shift left | Desloca o valor de um registrador, multiplicando-o por 2. |
+| `INC` | 0x6R | Increment | Incrementa o valor de um registrador por 1. |
+| `DEC` | 0x7R | Decrement | Decrementa o valor de um registrador por 1. |
 
 O segundo byte da instrução reserva dois nibbles pare denominar os registradores os quais iram realizar a operação. O registrador escolhido do primeiro nibble irá funcionar como acumulador, armazenando o valor da operação em si mesmo, exemplo:| 0x61 | 0x12 | --> R1 = R1 + R2;
 
@@ -80,6 +81,7 @@ O segundo byte da instrução reserva dois nibbles pare denominar os registrador
 | `JLT` | 0xD1 | Jump larger than | Realiza um "pulo" com condição; registrador A `maior` que registrador B, para o endereço especificado. |
 | `JST` | 0xD2 | Jump smaller than | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
 | `SBR` | 0xD3 | Subroutine | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
+| `RET` | 0xD4 | Return | Retorna da subroutina para o ultimo endereço de onde foi chamado  |
 
 
 ### 3.4 - Instruções de periféricos

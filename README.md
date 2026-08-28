@@ -37,7 +37,7 @@ o que está contido dentro de seu bloco são estruturas desenvolvidas especifica
 <p align="center"><b>Arquitetura</b></p>
 <br><br>
 
-## 3	Conjunto de instruções
+## 3	Arquitetura de conjunto de instruções - ISA
 
 ### 3.1 - Instruções de alocação de memória
 | Mnemônico | Código | Nome | Descrição |

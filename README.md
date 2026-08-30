@@ -33,8 +33,8 @@ Atualmente o processador de 16 bits ainda está em desenvolvimento, e portanto, 
 ### Unidade de lógica aritmética
 | Registradores | Registradores|
 | :--- | :--- |
-| 8 registradores de 8 bits | RAH, RAL, RBH, RBL, RCH , RCL, RDH, RDL |
-| 4 registradores de 16 bits | RA, RB, RC, RD |
+| 8 registradores de 8 bits | `RAH, RAL`, `RBH, RBL`, `RCH , RCL`, `RDH, RDL` |
+| 4 registradores de 16 bits | `RA`, `RB`, `RC`, `RD` |
 
 O banco de registradores da ULA é composto por 8 registradores de 8 bits, os quais podem ser utilizados como registradores de 16 bits. 
 

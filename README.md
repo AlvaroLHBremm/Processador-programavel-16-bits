@@ -30,6 +30,16 @@ Abaixo está uma comparação entre as arquiteturas do processador de 16 bits (D
 
 Atualmente o processador de 16 bits ainda está em desenvolvimento, e portanto, diversas estruturas cruciais estão faltando incluindo o roteamento dos barramentos. 
 
+### Unidade de lógica aritmética
+| Registradores | Registradores|
+| :--- | :--- |
+| 8 registradores de 8 bits | RAH, RAL, RBH, RBL, RCH , RCL, RDH, RDL |
+| 4 registradores de 16 bits | RA, RB, RC, RD |
+
+O banco de registradores da ULA é composto por 8 registradores de 8 bits, os quais podem ser utilizados como registradores de 16 bits. 
+
+A nomenclatura caracteriza a posição e utilidade do registrador. A letra `R` explica que é um registrador, a letra `A/B/C/D` é o agrupamento de registador de 16 bits e as letras `H/L` denotam sua posição, Com o byte MSB sendo descrito pela letra H de High e o byte lSB descrito pela letra L de Low.
+
 
 o que está contido dentro de seu bloco são estruturas desenvolvidas especificamente pare este projeto, como: Decodificador de instrução, display 64x64, modulo de memória RAM e ROM e ULA com banco de registradores. 
 

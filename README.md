@@ -71,11 +71,13 @@ Se o valor do registrador escolhido estiver entre [0...7], a instrução lidará
 ### 3.2 - Instruções aritméticas
 | Mnemônico | Código | Nome | Descrição |
 | :---: | :---: | :--- | :--- | 
-| `ADD` | 0x44 | Addition |  Soma o valor de dois registradores e salva em um registrador. |
-| `SUB` | 0x45 | Subtraction | Subtrai o valor de dois registradores e salva em um registrador. |
-| `MUL` | 0x46 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
-| `AND` | 0x47 | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
-| `OR`  | 0x48 | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
+| `ADD` | 0x44 | Addition |  Soma o valor de dois registradores. |
+| `SUB` | 0x45 | Subtraction | Subtrai o valor de dois registradores. |
+| `MUL` | 0x46 | Multiplication | multiplica o valor de dois registradores. |
+| `AND` | 0x47 | AND | Operação booleana AND entre o valor de dois registradores. |
+| `OR`  | 0x48 | OR | Operação booleana OR entre o valor de dois registradores. |
+| `NOT` | 0x49 | NOT | Operação booleana NOT entre o valor de dois registradores. |
+| `XOR` | 0x4A | XOR | Operação booleana XOR entre o valor de dois registradores. |
 | `SHR` | 0x5R | Shift Right | Desloca o valor de um registrador, dividindo-o por 2. |
 | `SHL` | 0x6R | Shift Left | Desloca o valor de um registrador, multiplicando-o por 2. |
 | `INC` | 0x7R | Increment | Incrementa o valor de um registrador por 1. |

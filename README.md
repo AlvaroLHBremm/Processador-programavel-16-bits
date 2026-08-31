@@ -76,12 +76,14 @@ Se o valor do registrador escolhido estiver entre [0...7], a instrução lidará
 | `MUL` | 0x46 | Multiplication | multiplica o valor de dois registradores e salva em um registrador. |
 | `AND` | 0x47 | AND | Operação booleana AND entre o valor de dois registradores e salva em um registrador. |
 | `OR`  | 0x48 | OR | Operação booleana OR entre o valor de dois registradores e salva em um registrador. |
-| `SHR` | 0x49 | Shift Right | Desloca o valor de um registrador, dividindo-o por 2. |
-| `SHL` | 0x4A | Shift Left | Desloca o valor de um registrador, multiplicando-o por 2. |
-| `INC` | 0x4B | Increment | Incrementa o valor de um registrador por 1. |
-| `DEC` | 0x4C | Decrement | Decrementa o valor de um registrador por 1. |
+| `SHR` | 0x5R | Shift Right | Desloca o valor de um registrador, dividindo-o por 2. |
+| `SHL` | 0x6R | Shift Left | Desloca o valor de um registrador, multiplicando-o por 2. |
+| `INC` | 0x7R | Increment | Incrementa o valor de um registrador por 1. |
+| `DEC` | 0x8R | Decrement | Decrementa o valor de um registrador por 1. |
 
 O segundo byte da instrução reserva dois nibbles pare denominar os registradores os quais iram realizar a operação. O registrador escolhido do primeiro nibble irá funcionar como acumulador, armazenando o valor da operação em si mesmo, exemplo:| 0x61 | 0x12 | --> R1 = R1 + R2;
+
+Seguindo a mesma lógica das instruções de alocação de memória, se os registradores selecionados pela instrução forem de 8 bits a instrução lidará com valores de 8 bits, e o mesmo para registradores de 16 bits.
 
 ### 3.3 - Instruções de pulos de memória
 | Mnemônico | Código | Nome | Descrição |
@@ -95,6 +97,8 @@ O segundo byte da instrução reserva dois nibbles pare denominar os registrador
 | `JST` | 0xD2 | Jump smaller than | Realiza um "pulo" com condição; registrador A `menor` que registrador B, para o endereço especificado. |
 | `SBR` | 0xD3 | Subroutine | Salva o endereço atual em um registrador e realiza um "pulo" sem condição para o endereço da sub-rotina especificado. |
 | `RET` | 0xD4 | Return | Retorna da subroutina para o ultimo endereço de onde foi chamado  |
+
+<!-- Search where to do return instruction by software or by hardware. By software would probably be more dynamic and would allow for software recursion. -->
 
 
 ### 3.4 - Instruções de periféricos

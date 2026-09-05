@@ -30,6 +30,23 @@ Abaixo está uma comparação entre as arquiteturas do processador de 16 bits (D
 
 Atualmente o processador de 16 bits ainda está em desenvolvimento, e portanto, diversas estruturas cruciais estão faltando incluindo o roteamento dos barramentos. 
 
+## 3 Arquitetura e blocos computacionais 
+
+### 3.1 - Memórias
+
+O barramento de 16 bits permite endereçar 64Kb de memória, contudo nem Aamemória ROM nem a RAM possuem modulos de 64kb no simulador Deeds. Como o intuito deste projeto é criar códigos em assembly mais complexos e de realizar carregamentos entre a a ROM e a RAM...
+
+Para atingir os 64kb foi utilizado a técnica de extensão de chip set ateravés do mapeamento de memória.
+
+### 3.2 - Fluxo de dados
+
+| Sigla | Nome | Descrição | 
+| :--- | :--- | :--- |
+| PL | Program Loader | Contador  |
+| PC | Program Counter | Varre/busca por instruções nos endereços da memória RAM. |
+| SP | Stack Pointer | Salva o ultimo endereço da pilha de memória. |
+| LR | Link Register | Registrador de endereço de retorno de função para subrotinas `Leaf`, isto é, subrotinas que não possuem nenhuma subrotina ninhada dentro de seu código/escopo. Não existe na arquitetura mas pode ser acessado pelos registradores da ULA. |
+
 ### Unidade de lógica aritmética
 | Registradores | Registradores|
 | :--- | :--- |
